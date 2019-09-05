@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Super Foes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
     <style>
@@ -26,13 +33,14 @@
     <div class="container">
             <div class="jumbotron">
                     <div class="container">
-                      <h1 class="display-4 titleApp">Friend Finder</h1>
+                      <h1 class="display-4 titleApp">Super Foe Finder</h1>
                       <hr>
-                      <p class="lead subTitleApp">Find your best friend on our app</p>
+                      <p class="lead subTitleApp">Find your best foe on our app</p>
                     </div>
                     <div class="inputSection">
                         <h2><strong>About You</strong></h2>
                         <br>
+                    <form method="POST" role="form">
                         <h3>Name [Required]</h3>
                         <input type="text" name='' id="name" class="form-control" required>
                         <br>
@@ -55,7 +63,7 @@
                         <br>
                         <h4><strong>Question 2</strong></h4>
                         <h5>You make very detailed and orderly plans.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q2">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -67,7 +75,7 @@
                         <br>
                         <h4><strong>Question 3</strong></h4>
                         <h5>Don't mind having existential conversations with others.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q3">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -79,7 +87,7 @@
                         <br>
                         <h4><strong>Question 4</strong></h4>
                         <h5>Enjoy the company of people who are refined and sophisticated.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q4">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -91,7 +99,7 @@
                         <br>
                         <h4><strong>Question 5</strong></h4>
                         <h5>Can't help agree that everything does indeed have it's price.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q5">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -103,7 +111,7 @@
                         <br>
                         <h4><strong>Question 6</strong></h4>
                         <h5>You like to think of yourself as reserved, working towards the spotlight rather than creating chaos wherever you go.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q6">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -115,7 +123,7 @@
                         <br>
                         <h4><strong>Question 7</strong></h4>
                         <h5>There  is no such thing in this world as good or evil, only calculated moves.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q7">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -127,7 +135,7 @@
                         <br>
                         <h4><strong>Question 8</strong></h4>
                         <h5>Modern technology fascinates you more than people do.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q8">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -139,7 +147,7 @@
                         <br>
                         <h4><strong>Question 9</strong></h4>
                         <h5>You're the kind of person that pats yourself on the back for getting things done.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q9">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -151,7 +159,7 @@
                         <br>
                         <h4><strong>Question 10</strong></h4>
                         <h5>You like to be in control of your situations no matter what.</h5>
-                        <select data-placeholder="" class="chosen-select" id="q1">
+                        <select data-placeholder="" class="chosen-select" id="q10">
                             <option value=""></option>
                             <option value="1">1 [Strongly Disagree]</option>
                             <option value="2">2</option>
@@ -161,17 +169,90 @@
                         </select>
                         <br>
                         <br>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true" data-toggle="modal" data-target="#myModal"></i>Submit</button>
                     </div>
-                    <div class="footer" style="position: fixed; margin-top: 100px;">
-                        <a href="/api/friends">API Friends List</a> | <a>Github Repo</a>
+                </form>
+                    <div class="footer" style="margin-top: 100px;">
+                        <a href="/api/friends">API Friends List</a> | <a href="https://github.com/mrterranova/FriendFinder">Github Repo</a>
                     </div>
                   </div>
     </div>
 
-    <!-- CDN for bootstrap JQuery  -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <div class="modal" id="modalResults" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Foes for Life!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modalText">
+                </div>
+                <div class="modal-footer">
+                  <p>Now conquer the world...or go out for coffee!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+</div> <!-- end main container -->
+
+<hr>
+
+<footer class="footer">
+    <div class="container">
+        <div class="navbar">
+            <a href="/api/friends">API Foes List</a> | <a href="https://github.com/jntolman/FriendFinder/">GitHub Repo</a>
+        </div>
+    </div>
+</footer>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script> -->
+<script type="text/javascript">
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+            ($("#q1").val()).slice(0,1), 
+            ($("#q2").val()).slice(0,1), 
+            ($("#q3").val()).slice(0,1), 
+            ($("#q4").val()).slice(0,1), 
+            ($("#q5").val()).slice(0,1), 
+            ($("#q6").val()).slice(0,1), 
+            ($("#q7").val()).slice(0,1), 
+            ($("#q8").val()).slice(0,1), 
+            ($("#q9").val()).slice(0,1), 
+            ($("#q10").val()).slice(0,1)
+        ]
+      };
+      console.log(newFriend);
+      $.post("/api/friends", newFriend)
+      .done(function(data) {
+      	$("#modalText").text("");
+      	var div = $("<div>");
+      	var titleName = $("<h3>");
+      	var photo = $("<img>");
+      	titleName.text(data.name);
+      	photo.css("max-width", "350");
+      	photo.attr("src", data.photo);
+      	div.append(titleName);
+      	div.append(photo);
+          $("#modalText").append(div);
+          $("#modalResults").modal("toggle");
+      });
+	
+	});
+  </script>
+
 </body>
 </html>
