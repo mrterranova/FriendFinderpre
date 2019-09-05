@@ -5,15 +5,14 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8000; 
 
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 // Sets up the Express app to handle data parsing
-app.use(express.static("app/public"));
+//app.use(express.static("app/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+//app.use(bodyParser.text());
+//app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
