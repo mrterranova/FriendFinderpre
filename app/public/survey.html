@@ -172,12 +172,6 @@
                         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true" data-toggle="modal" data-target="#myModal"></i>Submit</button>
                     </div>
                 </form>
-                    <div class="footer" style="margin-top: 100px;">
-                        <a href="/api/friends">API Friends List</a> | <a href="https://github.com/mrterranova/FriendFinder">Github Repo</a>
-                    </div>
-                  </div>
-    </div>
-
 
 
     <div class="modal" id="modalResults" tabindex="-1" role="dialog">
@@ -216,24 +210,24 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script> -->
+
+  
 <script type="text/javascript">
     $("#submit").on("click", function(event) {
       event.preventDefault();
       var newFriend = {
         name: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
-        scores: [
-            ($("#q1").val()).slice(0,1), 
-            ($("#q2").val()).slice(0,1), 
-            ($("#q3").val()).slice(0,1), 
-            ($("#q4").val()).slice(0,1), 
-            ($("#q5").val()).slice(0,1), 
-            ($("#q6").val()).slice(0,1), 
-            ($("#q7").val()).slice(0,1), 
-            ($("#q8").val()).slice(0,1), 
-            ($("#q9").val()).slice(0,1), 
-            ($("#q10").val()).slice(0,1)
-        ]
+        q1:  $("#q1").val(),
+        q2:  $("#q2").val(), 
+        q3:  $("#q3").val(), 
+        q4:  $("#q4").val(), 
+        q5:  $("#q5").val(), 
+        q6:  $("#q6").val(), 
+        q7:  $("#q7").val(), 
+        q8:  $("#q8").val(), 
+        q9:  $("#q9").val(), 
+        q10: $("#q10").val()
       };
       console.log(newFriend);
       $.post("/api/friends", newFriend)
@@ -249,8 +243,23 @@
       	div.append(photo);
           $("#modalText").append(div);
           $("#modalResults").modal("toggle");
+          clearValues();
       });
-	
+      function clearValues(){
+          $("#name").val("");
+          $("#photo").val("");
+          $("#q1").val("");
+          $("#q2").val("");
+          $("#q3").val("");
+          $("#q4").val("");
+          $("#q5").val("");
+          $("#q6").val("");
+          $("#q7").val("");
+          $("#q8").val("");
+          $("#q9").val("");
+          $("#q10").val("");
+      }
+
 	});
   </script>
 
